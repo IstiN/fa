@@ -22,6 +22,8 @@ flowchart TB
         JSR_SPEC["dependencies/js_widget_runtime<br/>Platform-Neutral jsr UI Contract & Conformance Fixtures"]
         QUICKJS["dependencies/quickjs_runtime<br/>Pure-Dart QuickJS FFI Runtime with Sync Host Callbacks"]
         DART_TUI["dependencies/dart_tui<br/>Elm-Style Terminal UI Framework for fa CLI"]
+        YOXTERM["dependencies/yoxterm<br/>Flutter Terminal Emulator & Renderer (CLI Visual Screenshots)"]
+        PTY2["dependencies/pty2<br/>Dart/Flutter Pseudo-Terminal (PTY) Library"]
     end
 
     EXEC_ENV --> CUBE
@@ -30,6 +32,8 @@ flowchart TB
     HUB_CLIENT --> HARNESS
     MEMORY --> HARNESS
     DART_TUI --> HARNESS
+    YOXTERM --> HARNESS
+    PTY2 --> HARNESS
     QUICKJS --> FLUTTER_JSR
     JSR_SPEC --> FLUTTER_JSR
     FLUTTER_JSR --> HARNESS
@@ -58,6 +62,8 @@ flowchart TB
 | `dependencies/js_widget_runtime` | `IstiN/js_widget_runtime` | `$FA_JSR_SPEC_DIR` | **JSR UI Contract**: Platform-neutral JSON node schema, semantics, and conformance fixtures (`docs/conformance/PROTOCOL.md`) shared across Flutter, Android, Apple, and React renderers. |
 | `dependencies/quickjs_runtime` | `IstiN/quickjs_runtime` | `$FA_QUICKJS_DIR` | **QuickJS FFI (`pub: quickjs_runtime`)**: Pure-Dart QuickJS 2024-01-13 runtime over `dart:ffi` with synchronous host callbacks (`NativeCallable`). |
 | `dependencies/dart_tui` | `IstiN/dart_tui` | `$FA_DART_TUI_DIR` | **Terminal UI (`pub: dart_tui`)**: Elm-style (Model–Update–View) TUI framework + `LineEditor` powering the interactive `fa` CLI. |
+| `dependencies/yoxterm` | `IstiN/yoxterm` | `$FA_YOXTERM_DIR` | **Terminal Emulator & Screenshot Renderer (`pub: yoxterm`)**: High-performance fork of `xterm.dart` (`Terminal` + `TerminalView`). Its pure-Dart core is vendored in `flutter_agent_harness/vendor/xterm` for PTY tests (`test/integration/pty_harness.dart`), while `flutter_app/test/cli_visual/` uses `TerminalView` to render real terminal PNG screenshots of the `fa` CLI. |
+| `dependencies/pty2` | `IstiN/pty2` | `$FA_PTY2_DIR` | **Pseudo-Terminal (`pub: pty2`)**: Fork of `pty2` with `pid` access and teardown fixes, vendored in `flutter_agent_harness/vendor/pty2` to drive real PTY subprocesses for `fa` CLI integration and visual screenshot tests. |
 
 ---
 

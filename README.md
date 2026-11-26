@@ -20,6 +20,8 @@ Running `bash setup/checkout.sh` (or triggering the `FA Universal Agent` workflo
 - **[`IstiN/js_widget_runtime`](https://github.com/IstiN/js_widget_runtime)** (`dependencies/js_widget_runtime`) — Platform-neutral `jsr` UI contract and conformance fixtures.
 - **[`IstiN/quickjs_runtime`](https://github.com/IstiN/quickjs_runtime)** (`dependencies/quickjs_runtime`) — Pure-Dart QuickJS `dart:ffi` runtime with synchronous host callbacks.
 - **[`IstiN/dart_tui`](https://github.com/IstiN/dart_tui)** (`dependencies/dart_tui`) — Elm-style terminal UI framework powering the `fa` CLI.
+- **[`IstiN/yoxterm`](https://github.com/IstiN/yoxterm)** (`dependencies/yoxterm`) — High-performance fork of `xterm.dart` (`Terminal` + `TerminalView`) used for PTY terminal emulation (`vendor/xterm`) and `fa` CLI visual screenshot tests (`flutter_app/test/cli_visual/`).
+- **[`IstiN/pty2`](https://github.com/IstiN/pty2)** (`dependencies/pty2`) — Pseudo-terminal (PTY) fork with `pid` access (`vendor/pty2`) driving live CLI PTY integration & visual tests.
 
 ## Usage
 

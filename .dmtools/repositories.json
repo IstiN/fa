@@ -59,6 +59,16 @@
         "repo": "IstiN/dart_tui",
         "branch": "main",
         "envVar": "FA_DART_TUI_DIR"
+      },
+      {
+        "repo": "IstiN/yoxterm",
+        "branch": "main",
+        "envVar": "FA_YOXTERM_DIR"
+      },
+      {
+        "repo": "IstiN/pty2",
+        "branch": "main",
+        "envVar": "FA_PTY2_DIR"
       }
     ]
   }
