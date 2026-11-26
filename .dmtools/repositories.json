@@ -1,0 +1,65 @@
+{
+  "git": {
+    "userName": "ai.teammate",
+    "userEmail": "agent.ai.native@gmail.com"
+  },
+  "repositories": {
+    "fa": [
+      {
+        "repo": "IstiN/flutter_agent_harness",
+        "branch": "main",
+        "envVar": "FA_HARNESS_DIR"
+      },
+      {
+        "repo": "IstiN/fa_network",
+        "branch": "main",
+        "envVar": "FA_NETWORK_DIR"
+      },
+      {
+        "repo": "IstiN/fa_cube",
+        "branch": "main",
+        "envVar": "FA_CUBE_DIR"
+      },
+      {
+        "repo": "IstiN/fa_widgets",
+        "branch": "main",
+        "envVar": "FA_WIDGETS_DIR"
+      },
+      {
+        "repo": "IstiN/fa_hub_client",
+        "branch": "main",
+        "envVar": "FA_HUB_CLIENT_DIR"
+      },
+      {
+        "repo": "IstiN/flutter_agent_memory",
+        "branch": "main",
+        "envVar": "FA_MEMORY_DIR"
+      },
+      {
+        "repo": "IstiN/fa_exec_env",
+        "branch": "main",
+        "envVar": "FA_EXEC_ENV_DIR"
+      },
+      {
+        "repo": "IstiN/flutter_js_widget_runtime",
+        "branch": "main",
+        "envVar": "FA_FLUTTER_JSR_DIR"
+      },
+      {
+        "repo": "IstiN/js_widget_runtime",
+        "branch": "main",
+        "envVar": "FA_JSR_SPEC_DIR"
+      },
+      {
+        "repo": "IstiN/quickjs_runtime",
+        "branch": "main",
+        "envVar": "FA_QUICKJS_DIR"
+      },
+      {
+        "repo": "IstiN/dart_tui",
+        "branch": "main",
+        "envVar": "FA_DART_TUI_DIR"
+      }
+    ]
+  }
+}

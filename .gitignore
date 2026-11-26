@@ -1,0 +1,12 @@
+# Checkout directory for .dmtools/repositories.json
+dependencies/
+
+# Transient runtime state (keep .dmtools/repositories.json and .fah/memory tracked!)
+dmtools.env
+.dmtools/*
+!.dmtools/repositories.json
+.fah/bash_jobs/
+.fah/.tools/
+.fah/trajectories/
+.fah/sessions/
+.DS_Store
