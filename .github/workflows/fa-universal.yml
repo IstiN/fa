@@ -68,11 +68,9 @@ jobs:
       target_repo: ${{ inputs.target_repo || github.event.client_payload.target_repo || github.repository }}
       issue_number: ${{ inputs.issue_number || github.event.client_payload.issue_number || github.event.issue.number || github.event.pull_request.number || '' }}
       session_key: ${{ inputs.session_key || github.event.client_payload.session_key || '' }}
-      comment_id: ${{ inputs.comment_id || github.event.client_payload.comment_id || github.event.comment.id || '' }}
+      comment_id: ${{ inputs.comment_id || github.event.client_payload.comment_id || '' }}
       in_reply_to_id: ${{ github.event.client_payload.in_reply_to_id || github.event.comment.in_reply_to_id || '' }}
       prompt: ${{ inputs.prompt || github.event.client_payload.prompt || '' }}
-      fa_provider_type: "zai"
-      fa_provider_config: '{"baseUrl":"https://api.z.ai/api/coding/paas/v4","model":"glm-5.3-flash","apiKeyEnvVar":"ZAI_CODE_KEY","input":["text","image"]}'
-      fa_providers_queue: '[{"provider_type":"zai","provider_config":{"baseUrl":"https://api.z.ai/api/coding/paas/v4","model":"glm-5.3-flash","apiKeyEnv":"ZAI_CODE_KEY","input":["text","image"]}},{"provider_type":"openai-completions","provider_config":{"baseUrl":"https://api.kimi.com/coding/v1","model":"kimi-for-coding","apiKeyEnv":"KIMI_REVIEW_KEY","input":["text","image"]}}]'
+      fa_providers_queue: ${{ vars.ENV_VAR_DEV_QUEUE || '' }}
       post_reply_to_issue: true
     secrets: inherit
