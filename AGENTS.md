@@ -72,10 +72,10 @@ flowchart TB
 1. **Inspect Sub-Repo Context First**:
    - Each repository under `dependencies/<repo>/` has its own `AGENTS.md` and quality gates (`scripts/pre-commit`, `crap4dart`, `crap4go`, etc.). Always read `dependencies/<repo>/AGENTS.md` when answering deep architectural questions or making changes in that repo.
 2. **Refreshing / Checking Out Dependencies**:
-   - In CI (`fa-universal`), `.dmtools/repositories.json` is automatically checked out into `./dependencies/` before `fa` starts.
-   - If any repo is missing or needs to be refreshed manually, run:
+   - In CI (`fa-universal`), `.dmtools/repositories.json` is automatically checked out in parallel into `./dependencies/` before `fa` starts.
+   - Locally, you can run `checkout.sh` directly from `IstiN/dmtools-agents` (or a local clone of `dmtools-agents`):
      ```bash
-     bash setup/checkout.sh
+     bash ../dmtools-agents/setup/checkout.sh
      ```
 3. **Cross-Repo Changes & PRs**:
    - Each folder under `dependencies/<repo>` is a full git clone with push credentials configured on `origin`.

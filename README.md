@@ -4,7 +4,7 @@ Umbrella repository for the **[Fa](https://fa1.dev)** multi-repository ecosystem
 
 ## Child Repositories (`.dmtools/repositories.json`)
 
-Running `bash setup/checkout.sh` (or triggering the `FA Universal Agent` workflow) clones/updates all Fa ecosystem repositories into `./dependencies/<repo>/`:
+Triggering the `FA Universal Agent` workflow (or running `dmtools-agents/setup/checkout.sh` locally) clones/updates all Fa ecosystem repositories into `./dependencies/<repo>/`:
 
 ### Core 5 Repositories
 - **[`IstiN/flutter_agent_harness`](https://github.com/IstiN/flutter_agent_harness)** (`dependencies/flutter_agent_harness`) — Core pure-Dart SDK, `fa` CLI, Flutter app (`flutter_app/`), `fa_ui`, `fa_llm`, `dap_hub`, browser extension, and Office add-in.
@@ -27,7 +27,7 @@ Running `bash setup/checkout.sh` (or triggering the `FA Universal Agent` workflo
 
 ### Local Checkout
 ```bash
-GH_TOKEN=$(gh auth token) bash setup/checkout.sh
+GH_TOKEN=$(gh auth token) bash ../dmtools-agents/setup/checkout.sh
 ```
 All repositories are cloned into `./dependencies/<repo>/` (override destination with `--dest <dir>`).
 
